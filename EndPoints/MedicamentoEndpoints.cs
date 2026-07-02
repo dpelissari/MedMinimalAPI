@@ -7,7 +7,7 @@ public static class MedicamentoEndpoints
 {
     public static void MapMedicamentoEndpoints(this IEndpointRouteBuilder app)
     {
-        var group = app.MapGroup("/medicamentos"); // Agrupa todas as rotas sob /medicamentos
+        var group = app.MapGroup("/medicamentos").RequireAuthorization("AdminOuUsuario");
 
         group.MapGet("/", async (MedicamentoDb db) =>
             await db.Medicamentos.ToListAsync()

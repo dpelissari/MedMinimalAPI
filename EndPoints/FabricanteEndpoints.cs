@@ -7,7 +7,7 @@ public static class FabricanteEndpoints
 {
     public static void MapFabricanteEndpoints(this IEndpointRouteBuilder app)
     {
-        var group = app.MapGroup("/fabricantes"); // Agrupa todas as rotas sob /fabricantes
+        var group = app.MapGroup("/fabricantes").RequireAuthorization("AdminOuUsuario"); 
 
         group.MapGet("/", async (MedicamentoDb db) =>
             await db.Fabricantes.ToListAsync()

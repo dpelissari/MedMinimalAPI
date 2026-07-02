@@ -2,10 +2,10 @@ using System.ComponentModel;
 
 public enum FormaFarmaceutica
 {
-    [Description("Comprmido")]
+    [Description("Comprimido")]
     Comprimido, 
 
-    [Description("Capsula")]
+    [Description("Cápsula")]
     Capsula,
 
     [Description("Drágeas")]
