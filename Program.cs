@@ -44,6 +44,14 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("AdminOuUsuario", policy => policy.RequireRole("Admin", "User"));
 });
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("Angular", policy =>
+        policy.WithOrigins("http://localhost:4200")
+              .AllowAnyHeader()
+              .AllowAnyMethod());
+});
+
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -51,6 +59,8 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
     app.MapScalarApiReference();
 }
+
+app.UseCors("Angular");
 
 app.MapFabricanteEndpoints();
 app.MapMedicamentoEndpoints();
