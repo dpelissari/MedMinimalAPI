@@ -7,7 +7,7 @@ public static class FabricanteEndpoints
 {
     public static void MapFabricanteEndpoints(this IEndpointRouteBuilder app)
     {
-        var group = app.MapGroup("/fabricantes").RequireAuthorization("AdminOuUsuario"); 
+        var group = app.MapGroup("/fabricantes"); 
 
         group.MapGet("/", async (MedicamentoDb db) =>
             await db.Fabricantes.ToListAsync()
@@ -34,7 +34,7 @@ public static class FabricanteEndpoints
             db.Fabricantes.Add(fabricante);
             await db.SaveChangesAsync();
             return Results.Created($"/{fabricante.Id}", fabricante);
-        });
+        }).RequireAuthorization("AdminOuUsuario");
 
         group.MapPut("/{id:guid}", async (Guid id, Fabricante fabricante, MedicamentoDb db, IValidator<Fabricante> validator) =>
         {
@@ -55,7 +55,7 @@ public static class FabricanteEndpoints
 
             await db.SaveChangesAsync();
             return Results.Ok(fabricanteRegistro);
-        });
+        }).RequireAuthorization("AdminOuUsuario");
 
         group.MapDelete("/{id:guid}", async (Guid id, MedicamentoDb db) =>
         {
@@ -70,6 +70,6 @@ public static class FabricanteEndpoints
             db.Fabricantes.Remove(fabricanteFromDb);
             await db.SaveChangesAsync();
             return Results.NoContent();
-        });
+        }).RequireAuthorization("AdminOuUsuario");
     }
 }

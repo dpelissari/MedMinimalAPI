@@ -7,7 +7,7 @@ public static class MedicamentoEndpoints
 {
     public static void MapMedicamentoEndpoints(this IEndpointRouteBuilder app)
     {
-        var group = app.MapGroup("/medicamentos").RequireAuthorization("AdminOuUsuario");
+        var group = app.MapGroup("/medicamentos");
 
         group.MapGet("/", async (MedicamentoDb db) =>
             await db.Medicamentos.ToListAsync()
@@ -35,7 +35,7 @@ public static class MedicamentoEndpoints
             await db.SaveChangesAsync();
 
             return Results.Created($"/{medicamento.Id}", medicamento);
-        });
+        }).RequireAuthorization("AdminOuUsuario");
 
         group.MapPut("/{id:guid}", async (Guid id, Medicamento medicamento, MedicamentoDb db, IValidator<Medicamento> validator) =>
         {
@@ -56,6 +56,6 @@ public static class MedicamentoEndpoints
 
             await db.SaveChangesAsync();
             return Results.Ok(medicamentoFromDb);
-        });
+        }).RequireAuthorization("AdminOuUsuario");
     }
 }
