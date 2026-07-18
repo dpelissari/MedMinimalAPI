@@ -10,7 +10,7 @@ public static class MedicamentoEndpoints
         var group = app.MapGroup("/medicamentos");
 
         group.MapGet("/", async (MedicamentoDb db) =>
-            await db.Medicamentos.ToListAsync()
+            await db.Medicamentos.Include(f => f.Fabricante).ToListAsync()
         );
 
         group.MapGet("/{id:guid}", async (Guid id, MedicamentoDb db) => {

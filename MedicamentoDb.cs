@@ -7,10 +7,4 @@ public class MedicamentoDb : DbContext
     public DbSet<Medicamento> Medicamentos => Set<Medicamento>();
     public DbSet<Fabricante> Fabricantes => Set<Fabricante>();
     public DbSet<Usuario> Usuarios => Set<Usuario>();
-
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        // Diz ao EF para nunca criar uma coluna para essa propriedade
-        modelBuilder.Entity<Medicamento>().Ignore(m => m.Disponivel);
-    }
 }
