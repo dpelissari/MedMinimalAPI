@@ -37,6 +37,45 @@ public static class MedicamentoEndpoints
             return Results.Created($"/{medicamento.Id}", medicamento);
         }).RequireAuthorization("AdminOuUsuario");
 
+        group.MapPost("/lote", async (List<Medicamento> medicamentos, MedicamentoDb db, IValidator<Medicamento> validator) =>
+        {
+            var criados = new List<Medicamento>();
+            var erros = new List<object>();
+
+            foreach (var medicamento in medicamentos)
+            {
+                var validationResult = await validator.ValidateAsync(medicamento);
+                if (!validationResult.IsValid)
+                {
+                    erros.Add(new { medicamento.Nome, Erros = validationResult.ToDictionary() });
+                    continue;
+                }
+
+                var fabricante = await db.Fabricantes.FirstOrDefaultAsync(f => f.Id == medicamento.FabricanteId);
+                if (fabricante is null)
+                {
+                    erros.Add(new { medicamento.Nome, Erro = "Fabricante não encontrado." });
+                    continue;
+                }
+
+                medicamento.Id = Guid.NewGuid();
+                db.Medicamentos.Add(medicamento);
+                criados.Add(medicamento);
+            }
+
+            if (criados.Count > 0)
+                await db.SaveChangesAsync();
+
+            return Results.Ok(new
+            {
+                TotalRecebidos = medicamentos.Count,
+                TotalCriados = criados.Count,
+                TotalErros = erros.Count,
+                Criados = criados,
+                Erros = erros
+            });
+        }).RequireAuthorization("AdminOuUsuario");
+
         group.MapPut("/{id:guid}", async (Guid id, Medicamento medicamento, MedicamentoDb db, IValidator<Medicamento> validator) =>
         {
             var validationResult = await validator.ValidateAsync(medicamento);
