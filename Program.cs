@@ -68,7 +68,7 @@ app.MapMedicamentoEndpoints();
 app.UseAuthentication();
 app.UseAuthorization();
 
-// 3. MAPEAR OS ENDPOINTS DO BANCO E DE LOGIN
+// Mapea os endpoints do banco e login
 app.MapUsuarioEndpoints();
 
 app.Run();

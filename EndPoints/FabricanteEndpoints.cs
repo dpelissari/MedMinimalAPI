@@ -1,4 +1,6 @@
 using FluentValidation;
+using MedMinimalApi.Dtos;
+using MedMinimalApi.Extensions;
 using Microsoft.EntityFrameworkCore;
 
 namespace MedMinimalApi.Endpoints;
@@ -9,8 +11,11 @@ public static class FabricanteEndpoints
     {
         var group = app.MapGroup("/fabricantes"); 
 
-        group.MapGet("/", async (MedicamentoDb db) =>
-            await db.Fabricantes.ToListAsync()
+        group.MapGet("/", async ([AsParameters] Paginacao p, MedicamentoDb db) =>
+            await db.Fabricantes
+                .AsNoTracking() // EF: leitura, sem rastrear
+                .OrderBy(f => f.NomeFantasia)
+                .PaginarAsync(p)
         );
 
         group.MapGet("/{id:guid}", async (Guid id, MedicamentoDb db) => {
