@@ -32,10 +32,13 @@ public static class MedicamentoEndpoints
             if (!validationResult.IsValid) 
                 return Results.ValidationProblem(validationResult.ToDictionary());
 
-            var fabricante = await db.Fabricantes.FirstOrDefaultAsync(f => f.Id == medicamento.FabricanteId);
-            if (fabricante is null)
+            var fabricanteExiste = await db.Fabricantes.AnyAsync(f => f.Id == medicamento.FabricanteId);
+            if (!fabricanteExiste)
                 return Results.BadRequest("Fabricante não encontrado.");
 
+            // Evita conflito de tracking: o body pode trazer Fabricante aninhado,
+            // mas a FK FabricanteId já basta para o insert.
+            medicamento.Fabricante = null;
             medicamento.Id = Guid.NewGuid();
             db.Medicamentos.Add(medicamento);
             await db.SaveChangesAsync();
@@ -48,6 +51,14 @@ public static class MedicamentoEndpoints
             var criados = new List<Medicamento>();
             var erros = new List<object>();
 
+            // Valida existência dos fabricantes uma vez (evita N queries e tracking duplicado)
+            var fabricanteIds = medicamentos.Select(m => m.FabricanteId).Distinct().ToList();
+            var fabricantesExistentes = await db.Fabricantes
+                .AsNoTracking()
+                .Where(f => fabricanteIds.Contains(f.Id))
+                .Select(f => f.Id)
+                .ToHashSetAsync();
+
             foreach (var medicamento in medicamentos)
             {
                 var validationResult = await validator.ValidateAsync(medicamento);
@@ -57,13 +68,15 @@ public static class MedicamentoEndpoints
                     continue;
                 }
 
-                var fabricante = await db.Fabricantes.FirstOrDefaultAsync(f => f.Id == medicamento.FabricanteId);
-                if (fabricante is null)
+                if (!fabricantesExistentes.Contains(medicamento.FabricanteId))
                 {
                     erros.Add(new { medicamento.Nome, Erro = "Fabricante não encontrado." });
                     continue;
                 }
 
+                // Mesmo fabricante aparece em vários itens do lote com instâncias diferentes.
+                // Sem limpar a navegação, o EF tenta trackear 2+ Fabricante com o mesmo Id.
+                medicamento.Fabricante = null;
                 medicamento.Id = Guid.NewGuid();
                 db.Medicamentos.Add(medicamento);
                 criados.Add(medicamento);
