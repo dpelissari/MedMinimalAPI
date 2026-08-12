@@ -7,17 +7,80 @@ namespace MedMinimalApi.Endpoints;
 
 public static class MedicamentoEndpoints
 {
+    private static readonly (ClasseTerapeutica Valor, string Nome, string Descricao)[] ClassesCache =
+        Enum.GetValues<ClasseTerapeutica>()
+            .Select(e => (e, e.ToString(), e.GetDescription()))
+            .ToArray();
+
     public static void MapMedicamentoEndpoints(this IEndpointRouteBuilder app)
     {
         var group = app.MapGroup("/medicamentos");
 
-        group.MapGet("/", async ([AsParameters] Paginacao p, MedicamentoDb db) =>
-            await db.Medicamentos
-                .Include(f => f.Fabricante)
-                .AsNoTracking() // EF: leitura, sem rastrear
+        group.MapGet("/", async ([AsParameters] Paginacao p, string? termo, string? tipo, MedicamentoDb db) =>
+        {
+            IQueryable<Medicamento> query = db.Medicamentos.AsNoTracking();
+
+            if (!string.IsNullOrWhiteSpace(termo))
+            {
+                var termoLimpo = termo.Trim();
+                var tipoFiltro = tipo?.Trim() ?? "nome";
+
+                if (tipoFiltro.Equals("classeTerapeutica", StringComparison.OrdinalIgnoreCase))
+                {
+                    var enumsCorrespondentes = ClassesCache
+                        .Where(c =>
+                            c.Nome.Contains(termoLimpo, StringComparison.OrdinalIgnoreCase) ||
+                            c.Descricao.Contains(termoLimpo, StringComparison.OrdinalIgnoreCase))
+                        .Select(c => c.Valor)
+                        .ToList();
+
+                    query = enumsCorrespondentes.Count == 0
+                        ? query.Where(_ => false)
+                        : query.Where(x => enumsCorrespondentes.Contains(x.ClasseTerapeutica));
+                }
+                else
+                {
+                    query = query.Where(x => EF.Functions.ILike(x.Nome, $"%{termoLimpo}%"));
+                }
+            }
+
+            var resultadoPaginado = await query
                 .OrderBy(m => m.Nome)
-                .PaginarAsync(p)
-        );
+                .Select(m => new
+                {
+                    m.Id,
+                    m.Nome,
+                    m.ClasseTerapeutica,
+                    m.FormaFarmaceutica,
+                    m.FornecidoPeloSUS,
+                    m.FabricanteId,
+                    Fabricante = m.Fabricante == null
+                        ? null
+                        : new
+                        {
+                            m.Fabricante.Id,
+                            m.Fabricante.NomeFantasia,
+                            m.Fabricante.Cnpj
+                        }
+                })
+                .PaginarAsync(p);
+
+            var itens = resultadoPaginado.Itens.Select(m => new
+            {
+                m.Id,
+                m.Nome,
+                m.ClasseTerapeutica,
+                ClasseTerapeuticaDescricao = m.ClasseTerapeutica.GetDescription(),
+                m.FormaFarmaceutica,
+                FormaFarmaceuticaDescricao = m.FormaFarmaceutica.GetDescription(),
+                m.FornecidoPeloSUS,
+                m.FabricanteId,
+                m.Fabricante
+            });
+
+            return Results.Ok(new { Itens = itens, resultadoPaginado.Pagina, resultadoPaginado.Tamanho, resultadoPaginado.Total });
+        });
+
 
         group.MapGet("/{id:guid}", async (Guid id, MedicamentoDb db) => {
             var medicamento = await db.Medicamentos.FirstOrDefaultAsync(m => m.Id == id);
