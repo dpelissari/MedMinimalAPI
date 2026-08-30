@@ -78,7 +78,7 @@ public static class MedicamentoEndpoints
                 m.Fabricante
             });
 
-            return Results.Ok(new { Itens = itens, resultadoPaginado.Pagina, resultadoPaginado.Tamanho, resultadoPaginado.Total });
+            return Results.Ok(new { Itens = itens, resultadoPaginado.Pagina, resultadoPaginado.Tamanho, resultadoPaginado.Total, resultadoPaginado.TotalPaginas });
         });
 
 
