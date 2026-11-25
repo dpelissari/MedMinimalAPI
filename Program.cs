@@ -1,4 +1,6 @@
-using MedMinimalApi.Endpoints; 
+using PiraRemumeApi.Data;
+using PiraRemumeApi.Endpoints;
+using MedMinimalApi.Endpoints;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using FluentValidation;
@@ -13,9 +15,7 @@ builder.Services.AddDbContext<MedicamentoDb>(opt => opt.UseNpgsql(connectionStri
 builder.Services.AddOpenApi();
 
 builder.Services.AddValidatorsFromAssemblyContaining<MedicamentoValidator>();
-builder.Services.AddValidatorsFromAssemblyContaining<FabricanteValidator>();
 
-// Configuracao do JWT
 var jwtSettings = builder.Configuration.GetSection("Jwt");
 var key = System.Text.Encoding.ASCII.GetBytes(jwtSettings["Key"]!);
 
@@ -47,12 +47,25 @@ builder.Services.AddAuthorization(options =>
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("Angular", policy =>
-        policy.WithOrigins("http://localhost:4200")
-              .AllowAnyHeader()
-              .AllowAnyMethod());
+        policy.SetIsOriginAllowed(origin =>
+            {
+                if (!Uri.TryCreate(origin, UriKind.Absolute, out var uri))
+                    return false;
+
+                return uri.IsLoopback;
+            })
+            .AllowAnyHeader()
+            .AllowAnyMethod());
 });
 
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<MedicamentoDb>();
+    await db.Database.MigrateAsync();
+    await RemumeSeeder.SeedAsync(db, app.Environment);
+}
 
 if (app.Environment.IsDevelopment())
 {
@@ -61,14 +74,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseCors("Angular");
-
-app.MapFabricanteEndpoints();
-app.MapMedicamentoEndpoints();
-
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Mapea os endpoints do banco e login
+app.MapMedicamentoEndpoints();
+app.MapFarmaciaEndpoints();
 app.MapUsuarioEndpoints();
 
 app.Run();

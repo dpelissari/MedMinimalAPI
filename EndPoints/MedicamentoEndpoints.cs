@@ -1,20 +1,31 @@
-using FluentValidation;
-using MedMinimalApi.Dtos;
-using MedMinimalApi.Extensions;
+using PiraRemumeApi.Dtos;
+using PiraRemumeApi.Extensions;
 using Microsoft.EntityFrameworkCore;
 
-namespace MedMinimalApi.Endpoints;
+namespace PiraRemumeApi.Endpoints;
 
 public static class MedicamentoEndpoints
 {
-    private static readonly (ClasseTerapeutica Valor, string Nome, string Descricao)[] ClassesCache =
-        Enum.GetValues<ClasseTerapeutica>()
-            .Select(e => (e, e.ToString(), e.GetDescription()))
-            .ToArray();
+    public static readonly RemumeFonte FonteRemume = new(
+        "REMUME Piracicaba 2023",
+        "2024-08-06",
+        "https://piracicaba.sp.gov.br/wp-content/uploads/2024/08/REMUME-2023-Grupo-Farmacologico-07-24.pdf");
 
     public static void MapMedicamentoEndpoints(this IEndpointRouteBuilder app)
     {
         var group = app.MapGroup("/medicamentos");
+
+        group.MapGet("/grupos", async (MedicamentoDb db) =>
+        {
+            var grupos = await db.Medicamentos
+                .AsNoTracking()
+                .Select(m => m.GrupoFarmacologico)
+                .Distinct()
+                .OrderBy(g => g)
+                .ToListAsync();
+
+            return Results.Ok(grupos);
+        });
 
         group.MapGet("/", async ([AsParameters] Paginacao p, string? termo, string? tipo, MedicamentoDb db) =>
         {
@@ -24,159 +35,84 @@ public static class MedicamentoEndpoints
             {
                 var termoLimpo = termo.Trim();
                 var tipoFiltro = tipo?.Trim() ?? "nome";
+                var porGrupo = tipoFiltro.Equals("grupo", StringComparison.OrdinalIgnoreCase);
 
-                if (tipoFiltro.Equals("classeTerapeutica", StringComparison.OrdinalIgnoreCase))
+                if (porGrupo)
                 {
-                    var enumsCorrespondentes = ClassesCache
-                        .Where(c =>
-                            c.Nome.Contains(termoLimpo, StringComparison.OrdinalIgnoreCase) ||
-                            c.Descricao.Contains(termoLimpo, StringComparison.OrdinalIgnoreCase))
-                        .Select(c => c.Valor)
-                        .ToList();
-
-                    query = enumsCorrespondentes.Count == 0
-                        ? query.Where(_ => false)
-                        : query.Where(x => enumsCorrespondentes.Contains(x.ClasseTerapeutica));
+                    query = query.Where(m => m.GrupoFarmacologico == termoLimpo);
                 }
                 else
                 {
-                    query = query.Where(x => EF.Functions.ILike(x.Nome, $"%{termoLimpo}%"));
+                    query = query.Where(m =>
+                        EF.Functions.ILike(m.Nome, $"%{termoLimpo}%")
+                        || m.Apresentacoes.Any(a => EF.Functions.ILike(a.Descricao, $"%{termoLimpo}%")));
                 }
             }
 
-            var resultadoPaginado = await query
+            var idsPaginados = await query
                 .OrderBy(m => m.Nome)
-                .Select(m => new
-                {
-                    m.Id,
-                    m.Nome,
-                    m.ClasseTerapeutica,
-                    m.FormaFarmaceutica,
-                    m.FornecidoPeloSUS,
-                    m.FabricanteId,
-                    Fabricante = m.Fabricante == null
-                        ? null
-                        : new
-                        {
-                            m.Fabricante.Id,
-                            m.Fabricante.NomeFantasia,
-                            m.Fabricante.Cnpj
-                        }
-                })
+                .Select(m => m.Id)
                 .PaginarAsync(p);
 
-            var itens = resultadoPaginado.Itens.Select(m => new
-            {
-                m.Id,
-                m.Nome,
-                m.ClasseTerapeutica,
-                ClasseTerapeuticaDescricao = m.ClasseTerapeutica.GetDescription(),
-                m.FormaFarmaceutica,
-                FormaFarmaceuticaDescricao = m.FormaFarmaceutica.GetDescription(),
-                m.FornecidoPeloSUS,
-                m.FabricanteId,
-                m.Fabricante
-            });
-
-            return Results.Ok(new { Itens = itens, resultadoPaginado.Pagina, resultadoPaginado.Tamanho, resultadoPaginado.Total, resultadoPaginado.TotalPaginas });
-        });
-
-
-        group.MapGet("/{id:guid}", async (Guid id, MedicamentoDb db) => {
-            var medicamento = await db.Medicamentos.FirstOrDefaultAsync(m => m.Id == id);
-            if (medicamento is null)
-                return Results.NotFound("Nenhum medicamento encontrado com o ID informado.");
-            return Results.Ok(medicamento);
-        });
-
-        group.MapPost("/", async (Medicamento medicamento, MedicamentoDb db, IValidator<Medicamento> validator) =>
-        {
-            var validationResult = await validator.ValidateAsync(medicamento);
-            if (!validationResult.IsValid) 
-                return Results.ValidationProblem(validationResult.ToDictionary());
-
-            var fabricanteExiste = await db.Fabricantes.AnyAsync(f => f.Id == medicamento.FabricanteId);
-            if (!fabricanteExiste)
-                return Results.BadRequest("Fabricante não encontrado.");
-
-            // Evita conflito de tracking: o body pode trazer Fabricante aninhado,
-            // mas a FK FabricanteId já basta para o insert.
-            medicamento.Fabricante = null;
-            medicamento.Id = Guid.NewGuid();
-            db.Medicamentos.Add(medicamento);
-            await db.SaveChangesAsync();
-
-            return Results.Created($"/{medicamento.Id}", medicamento);
-        }).RequireAuthorization("AdminOuUsuario");
-
-        group.MapPost("/lote", async (List<Medicamento> medicamentos, MedicamentoDb db, IValidator<Medicamento> validator) =>
-        {
-            var criados = new List<Medicamento>();
-            var erros = new List<object>();
-
-            // Valida existência dos fabricantes uma vez (evita N queries e tracking duplicado)
-            var fabricanteIds = medicamentos.Select(m => m.FabricanteId).Distinct().ToList();
-            var fabricantesExistentes = await db.Fabricantes
+            var medicamentos = await db.Medicamentos
                 .AsNoTracking()
-                .Where(f => fabricanteIds.Contains(f.Id))
-                .Select(f => f.Id)
-                .ToHashSetAsync();
+                .Where(m => idsPaginados.Itens.Contains(m.Id))
+                .Include(m => m.Apresentacoes)
+                    .ThenInclude(a => a.Unidades)
+                .ToListAsync();
 
-            foreach (var medicamento in medicamentos)
-            {
-                var validationResult = await validator.ValidateAsync(medicamento);
-                if (!validationResult.IsValid)
-                {
-                    erros.Add(new { medicamento.Nome, Erros = validationResult.ToDictionary() });
-                    continue;
-                }
-
-                if (!fabricantesExistentes.Contains(medicamento.FabricanteId))
-                {
-                    erros.Add(new { medicamento.Nome, Erro = "Fabricante não encontrado." });
-                    continue;
-                }
-
-                // Mesmo fabricante aparece em vários itens do lote com instâncias diferentes.
-                // Sem limpar a navegação, o EF tenta trackear 2+ Fabricante com o mesmo Id.
-                medicamento.Fabricante = null;
-                medicamento.Id = Guid.NewGuid();
-                db.Medicamentos.Add(medicamento);
-                criados.Add(medicamento);
-            }
-
-            if (criados.Count > 0)
-                await db.SaveChangesAsync();
+            var porId = medicamentos.ToDictionary(m => m.Id);
+            var itens = idsPaginados.Itens
+                .Where(porId.ContainsKey)
+                .Select(id => Mapear(porId[id]))
+                .ToList();
 
             return Results.Ok(new
             {
-                TotalRecebidos = medicamentos.Count,
-                TotalCriados = criados.Count,
-                TotalErros = erros.Count,
-                Criados = criados,
-                Erros = erros
+                Itens = itens,
+                idsPaginados.Pagina,
+                idsPaginados.Tamanho,
+                idsPaginados.Total,
+                idsPaginados.TotalPaginas,
+                Fonte = FonteRemume
             });
-        }).RequireAuthorization("AdminOuUsuario");
+        });
 
-        group.MapPut("/{id:guid}", async (Guid id, Medicamento medicamento, MedicamentoDb db, IValidator<Medicamento> validator) =>
+        group.MapGet("/{id:guid}", async (Guid id, MedicamentoDb db) =>
         {
-            var validationResult = await validator.ValidateAsync(medicamento);
-            if (!validationResult.IsValid) 
-                return Results.ValidationProblem(validationResult.ToDictionary());
+            var medicamento = await db.Medicamentos
+                .AsNoTracking()
+                .Include(m => m.Apresentacoes)
+                    .ThenInclude(a => a.Unidades)
+                .FirstOrDefaultAsync(m => m.Id == id);
 
-            var medicamentoFromDb = await db.Medicamentos.FindAsync(id);
-            if (medicamentoFromDb is null) 
-                return Results.NotFound($"Nenhum medicamento encontrado com o id {id}");
+            if (medicamento is null)
+                return Results.NotFound("Nenhum medicamento encontrado na REMUME com o ID informado.");
 
-            var fabricanteExiste = await db.Fabricantes.AnyAsync(f => f.Id == medicamento.FabricanteId);
-            if (!fabricanteExiste)
-                return Results.BadRequest($"Fabricante com o id {medicamento.FabricanteId} não encontrado");
+            return Results.Ok(new { Medicamento = Mapear(medicamento), Fonte = FonteRemume });
+        });
+    }
 
-            db.Entry(medicamentoFromDb!).CurrentValues.SetValues(medicamento);
-            medicamentoFromDb!.Id = id;
+    private static MedicamentoRemume Mapear(Medicamento m)
+    {
+        var apresentacoes = m.Apresentacoes
+            .OrderBy(a => a.Descricao)
+            .Select(a => new ApresentacaoResumo(
+                a.Id,
+                a.Descricao,
+                a.Abrangencia.ToString(),
+                a.Abrangencia.GetDescription(),
+                a.Observacao,
+                a.Unidades.OrderBy(u => u.Nome).Select(u => new UnidadeResumo(u.Id, u.Nome, u.Slug)).ToList()))
+            .ToList();
 
-            await db.SaveChangesAsync();
-            return Results.Ok(medicamentoFromDb);
-        }).RequireAuthorization("AdminOuUsuario");
+        return new MedicamentoRemume(
+            m.Id,
+            m.Nome,
+            m.GrupoFarmacologico,
+            m.ClasseTerapeutica,
+            apresentacoes,
+            apresentacoes.Count > 0 && apresentacoes.All(a => a.Abrangencia == nameof(AbrangenciaDisponibilidade.TodasAsFarmaciasMunicipais)),
+            apresentacoes.Any(a => a.Abrangencia == nameof(AbrangenciaDisponibilidade.Restrito)));
     }
 }
