@@ -1,6 +1,6 @@
 using PiraRemumeApi.Data;
 using PiraRemumeApi.Endpoints;
-using MedMinimalApi.Endpoints;
+using PiraRemumeApi.Servicos;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using FluentValidation;
@@ -58,6 +58,15 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod());
 });
 
+builder.Services.AddHttpClient("Sincronismo", client =>
+{
+    client.Timeout = TimeSpan.FromSeconds(30);
+    client.DefaultRequestHeaders.UserAgent.ParseAdd("PiraRemumeClient/1.0 (consulta informativa REMUME Piracicaba)");
+});
+builder.Services.AddScoped<SincronismoFonteService>();
+builder.Services.AddScoped<CatalogoAtualizador>();
+builder.Services.AddHostedService<SincronismoHostedService>();
+
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
@@ -79,6 +88,7 @@ app.UseAuthorization();
 
 app.MapMedicamentoEndpoints();
 app.MapFarmaciaEndpoints();
+app.MapSincronismoEndpoints();
 app.MapUsuarioEndpoints();
 
 app.Run();

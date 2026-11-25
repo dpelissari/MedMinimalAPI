@@ -8,6 +8,7 @@ public class MedicamentoDb : DbContext
     public DbSet<Apresentacao> Apresentacoes => Set<Apresentacao>();
     public DbSet<FarmaciaMunicipal> FarmaciasMunicipais => Set<FarmaciaMunicipal>();
     public DbSet<Usuario> Usuarios => Set<Usuario>();
+    public DbSet<ConfiguracaoSincronismo> ConfiguracoesSincronismo => Set<ConfiguracaoSincronismo>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

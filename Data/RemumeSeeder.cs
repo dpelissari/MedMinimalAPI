@@ -10,7 +10,7 @@ public static class RemumeSeeder
         PropertyNameCaseInsensitive = true
     };
 
-    public static async Task SeedAsync(MedicamentoDb db, IWebHostEnvironment env)
+    public static async Task SeedAsync(MedicamentoDb db, IWebHostEnvironment env, bool forcar = false)
     {
         var pasta = Path.Combine(env.ContentRootPath, "Data");
         var caminhoItens = Path.Combine(pasta, "remume-piracicaba.json");
@@ -31,7 +31,8 @@ public static class RemumeSeeder
         var farmaciasDesatualizadas = await db.FarmaciasMunicipais.CountAsync() != arquivoFarmacias.Itens.Count
             || await db.FarmaciasMunicipais.AnyAsync(f => string.IsNullOrWhiteSpace(f.Endereco));
 
-        var precisaReseed = !await db.Medicamentos.AnyAsync()
+        var precisaReseed = forcar
+            || !await db.Medicamentos.AnyAsync()
             || await db.Medicamentos.AnyAsync(m => string.IsNullOrWhiteSpace(m.GrupoFarmacologico))
             || farmaciasDesatualizadas;
 
@@ -56,15 +57,14 @@ public static class RemumeSeeder
 
         foreach (var item in arquivo.Itens)
         {
-            if (!gruposPorNome.TryGetValue(item.Nome.Trim(), out var classificacao))
-                throw new InvalidOperationException($"Grupo farmacológico não encontrado para '{item.Nome}'.");
+            gruposPorNome.TryGetValue(item.Nome.Trim(), out var classificacao);
 
             var medicamento = new Medicamento
             {
                 Id = Guid.NewGuid(),
                 Nome = item.Nome.Trim(),
-                GrupoFarmacologico = classificacao.Grupo.Trim(),
-                ClasseTerapeutica = classificacao.Classe.Trim()
+                GrupoFarmacologico = string.IsNullOrWhiteSpace(classificacao?.Grupo) ? "Sem classificação" : classificacao.Grupo.Trim(),
+                ClasseTerapeutica = string.IsNullOrWhiteSpace(classificacao?.Classe) ? "Não informada" : classificacao.Classe.Trim()
             };
 
             foreach (var linha in item.Apresentacoes)

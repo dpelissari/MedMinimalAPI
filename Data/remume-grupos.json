@@ -1,111 +1,446 @@
-{
-  "Acebrofilina": { "grupo": "Sistema Respiratório", "classe": "Broncodilatador/ Mucolítico e Expectorante" },
-  "Acetato de retinol + Colecalciferol": { "grupo": "Vitaminas", "classe": "Suplemento vitamínico" },
-  "Aciclovir": { "grupo": "Antivirais", "classe": "Nucleosídeo análogo de purina" },
-  "Ácido acetilsalicílico": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Antiagregante plaquetário" },
-  "Ácido fólico": { "grupo": "Vitaminas", "classe": "Suplemento vitamínico" },
-  "Ácido valproico": { "grupo": "Sistema Nervoso Central", "classe": "Anticonvulsivante" },
-  "Albendazol": { "grupo": "Antiparasitários", "classe": "Anti-helmíntico" },
-  "Alendronato de sódio": { "grupo": "Tratamento e Prevenção da Osteoporose", "classe": "Bisfosfonato" },
-  "Alopurinol": { "grupo": "Medicamentos utilizados no tratamento da gota", "classe": "Antigotoso" },
-  "Aminofilina": { "grupo": "Sistema Respiratório", "classe": "Broncodilatador" },
-  "Amiodarona": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Antiarrítmico" },
-  "Amitriptilina": { "grupo": "Sistema Nervoso Central", "classe": "Antidepressivo e Estabilizador do Humor" },
-  "Amoxicilina": { "grupo": "Antibacterianos", "classe": "Penicilina" },
-  "Amoxicilina + Clavulanato de potássio": { "grupo": "Antibacterianos", "classe": "Penicilina associada a inibidor de beta lactamase" },
-  "Anlodipino": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Anti-hipertensivo (bloqueador de canal de cálcio)" },
-  "Atenolol": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Anti-hipertensivo (bloqueador beta adrenérgico)" },
-  "Azitromicina": { "grupo": "Antibacterianos", "classe": "Macrolídeo" },
-  "Biperideno": { "grupo": "Sistema Nervoso Central", "classe": "Antiparkinsoniano" },
-  "Bromazepam": { "grupo": "Sistema Nervoso Central", "classe": "Ansiolítico e Sedativo" },
-  "Captopril": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Anti-hipertensivo (inibidor da enzima conversora de angiotensina)" },
-  "Carbamazepina": { "grupo": "Sistema Nervoso Central", "classe": "Anticonvulsivante/ Antidepressivo e Estabilizador do Humor" },
-  "Carbonato de cálcio": { "grupo": "Suplementos Minerais", "classe": "Reposição mineral de cálcio" },
-  "Carbonato de lítio": { "grupo": "Sistema Nervoso Central", "classe": "Antidepressivo e Estabilizador do Humor" },
-  "Carvedilol": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Anti-hipertensivo (beta bloqueador adrenérgico)" },
-  "Cefalexina": { "grupo": "Antibacterianos", "classe": "Cefalosporina" },
-  "Cinarizina": { "grupo": "Sistema Digestório", "classe": "Antivertiginoso" },
-  "Ciprofloxacino": { "grupo": "Antibacterianos", "classe": "Quinolona" },
-  "Clindamicina": { "grupo": "Antibacterianos", "classe": "Lincosamida" },
-  "Clomipramina": { "grupo": "Sistema Nervoso Central", "classe": "Antidepressivo e Estabilizador do Humor" },
-  "Clonazepam": { "grupo": "Sistema Nervoso Central", "classe": "Ansiolítico e Sedativo" },
-  "Cloreto de potássio": { "grupo": "Correção de Eletrólitos", "classe": "Repositor eletrolítico de potássio" },
-  "Cloreto de sódio": { "grupo": "Sistema Respiratório", "classe": "Fluidificante" },
-  "Clorpromazina": { "grupo": "Sistema Nervoso Central", "classe": "Antipsicótico" },
-  "Decanoato de haloperidol": { "grupo": "Sistema Nervoso Central", "classe": "Antipsicótico" },
-  "Desogestrel + Etinilestradiol": { "grupo": "Sistema Geniturinário e Reprodutor", "classe": "Contraceptivo hormonal" },
-  "Dexametasona": { "grupo": "Anti-inflamatórios", "classe": "Esteroides" },
-  "Diazepam": { "grupo": "Sistema Nervoso Central", "classe": "Ansiolítico e Sedativo" },
-  "Digoxina": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Glicosídeo cardíaco" },
-  "Dimenidrinato + Piridoxina": { "grupo": "Sistema Digestório", "classe": "Antivertiginoso e Antiemético" },
-  "Dipirona": { "grupo": "Analgésicos e Antipiréticos", "classe": "Analgésico não opioide/ Antipirético" },
-  "Doxazosina": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Anti-hipertensivo (alfa bloqueador)" },
-  "Doxiciclina": { "grupo": "Antibacterianos", "classe": "Tetraciclina" },
-  "Enalapril": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Anti-hipertensivo (inibidor da enzima conversora de angiotensina)" },
-  "Enantato de noretisterona + Valerato de estradiol": { "grupo": "Sistema Geniturinário e Reprodutor", "classe": "Contraceptivo hormonal" },
-  "Escopolamina": { "grupo": "Sistema Digestório", "classe": "Antiespasmódico" },
-  "Espironolactona": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Diurético (poupador de potássio)" },
-  "Estriol": { "grupo": "Sistema Geniturinário e Reprodutor", "classe": "Terapia de reposição hormonal" },
-  "Estrogênios conjugados": { "grupo": "Sistema Geniturinário e Reprodutor", "classe": "Terapia de reposição hormonal" },
-  "Fenitoína": { "grupo": "Sistema Nervoso Central", "classe": "Anticonvulsivante" },
-  "Fenobarbital": { "grupo": "Sistema Nervoso Central", "classe": "Anticonvulsivante" },
-  "Finasterida": { "grupo": "Sistema Geniturinário e Reprodutor", "classe": "Antiandrógeno inibidor da 5-alfarredutase" },
-  "Fluconazol": { "grupo": "Antifúngicos", "classe": "Triazólico" },
-  "Fluocinolona + Neomicina + Polimixina B + Lidocaína": { "grupo": "Antibacterianos", "classe": "Polimixina" },
-  "Fluoxetina": { "grupo": "Sistema Nervoso Central", "classe": "Antidepressivo e Estabilizador do Humor" },
-  "Furosemida": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Diurético (alça)" },
-  "Glibenclamida": { "grupo": "Sistema Endócrino", "classe": "Antidiabético (sulfonilureia)" },
-  "Gliclazida": { "grupo": "Sistema Endócrino", "classe": "Antidiabético (sulfonilureia)" },
-  "Guaco": { "grupo": "Sistema Respiratório", "classe": "Expectorante fitoterápico" },
-  "Haloperidol": { "grupo": "Sistema Nervoso Central", "classe": "Antipsicótico" },
-  "Hidroclorotiazida": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Diurético (tiazídico)" },
-  "Hidróxido de alumínio + Hidróxido de magnésio + Simeticona": { "grupo": "Sistema Digestório", "classe": "Antiácido" },
-  "Ibuprofeno": { "grupo": "Anti-inflamatórios", "classe": "Não esteroides" },
-  "Imipramina": { "grupo": "Sistema Nervoso Central", "classe": "Antidepressivo e Estabilizador do Humor" },
-  "Imiquimode": { "grupo": "Imunomodulador", "classe": "Imidazoquinolina" },
-  "Insulina Humana NPH": { "grupo": "Sistema Endócrino", "classe": "Antidiabético" },
-  "Insulina Humana Regular": { "grupo": "Sistema Endócrino", "classe": "Antidiabético" },
-  "Ivermectina": { "grupo": "Antiparasitários", "classe": "Anti-helmíntico" },
-  "Levodopa + Benserazida": { "grupo": "Sistema Nervoso Central", "classe": "Antiparkinsoniano" },
-  "Levodopa + Carbidopa": { "grupo": "Sistema Nervoso Central", "classe": "Antiparkinsoniano" },
-  "Levomepromazina": { "grupo": "Sistema Nervoso Central", "classe": "Antipsicótico" },
-  "Levonorgestrel": { "grupo": "Sistema Geniturinário e Reprodutor", "classe": "Contraceptivo hormonal de emergência" },
-  "Levonorgestrel + Etinilestradiol": { "grupo": "Sistema Geniturinário e Reprodutor", "classe": "Contraceptivo hormonal" },
-  "Levotiroxina": { "grupo": "Sistema Endócrino", "classe": "Hormônio tireoidiano" },
-  "Loratadina": { "grupo": "Antialérgicos", "classe": "Antagonista de receptor de histamina" },
-  "Losartana": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Anti-hipertensivo (antagonista de receptor de angiotensina II)" },
-  "Manitol": { "grupo": "Sistema Digestório", "classe": "Laxativo (preparo para colonoscopia)" },
-  "Medroxiprogesterona": { "grupo": "Sistema Geniturinário e Reprodutor", "classe": "Contraceptivo hormonal" },
-  "Metformina": { "grupo": "Sistema Endócrino", "classe": "Antidiabético (biguanida)" },
-  "Metildopa": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Anti-hipertensivo de ação central" },
-  "Metronidazol": { "grupo": "Antibacterianos", "classe": "Imidazólico" },
-  "Miconazol": { "grupo": "Antifúngicos", "classe": "Antifúngico" },
-  "Neomicina + Bacitracina": { "grupo": "Antibacterianos", "classe": "Antibacteriano aminoglicosídeo tópico" },
-  "Nimesulida": { "grupo": "Anti-inflamatórios", "classe": "Não esteroides" },
-  "Nirmatrelvir + Ritonavir": { "grupo": "Antivirais", "classe": "Inibidor peptidomimético de protease" },
-  "Nistatina": { "grupo": "Antifúngicos", "classe": "Antifúngico" },
-  "Nitrazepam": { "grupo": "Sistema Nervoso Central", "classe": "Ansiolítico e Sedativo" },
-  "Nitrofurantoína": { "grupo": "Antibacterianos", "classe": "Nitrofurano" },
-  "Noretisterona": { "grupo": "Sistema Geniturinário e Reprodutor", "classe": "Terapia de reposição hormonal/ Contraceptivo" },
-  "Óleo mineral": { "grupo": "Sistema Digestório", "classe": "Laxativo" },
-  "Omeprazol": { "grupo": "Sistema Digestório", "classe": "Antisecretor (inibidor da bomba de próton)" },
-  "Oseltamivir": { "grupo": "Antivirais", "classe": "Inibidor de neuraminidase" },
-  "Palmitato de retinol + Colecalciferol + Óxido de zinco": { "grupo": "Pele e Mucosas", "classe": "Cicatrizante, emoliente e protetor" },
-  "Paracetamol": { "grupo": "Analgésicos e Antipiréticos", "classe": "Analgésico não opioide/ Antipirético" },
-  "Permetrina": { "grupo": "Antiparasitários", "classe": "Ectoparasiticida" },
-  "Prednisolona": { "grupo": "Anti-inflamatórios", "classe": "Esteroides" },
-  "Prednisona": { "grupo": "Anti-inflamatórios", "classe": "Esteroides" },
-  "Prometazina": { "grupo": "Antialérgicos", "classe": "Antagonista de receptor de histamina" },
-  "Propatilnitrato": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Vasodilatador" },
-  "Propranolol": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Anti-hipertensivo (bloqueador beta adrenérgico)" },
-  "Sais para reidratação oral": { "grupo": "Suplementos Minerais", "classe": "Reposição mineral hidroeletrolítico" },
-  "Sertralina": { "grupo": "Sistema Nervoso Central", "classe": "Antidepressivo e Estabilizador do Humor" },
-  "Simeticona": { "grupo": "Sistema Digestório", "classe": "Antiflatulento" },
-  "Sinvastatina": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Estatina" },
-  "Sulfametoxazol + Trimetoprima": { "grupo": "Antibacterianos", "classe": "Sulfonamida" },
-  "Sulfato ferroso": { "grupo": "Suplementos Minerais", "classe": "Reposição mineral de ferro" },
-  "Tobramicina": { "grupo": "Antibacterianos", "classe": "Antibacteriano aminoglicosídeo oftálmico" },
-  "Varfarina": { "grupo": "Anticoagulantes", "classe": "Antagonista da vitamina K" },
-  "Verapamil": { "grupo": "Sistema Cardiovascular e Renal", "classe": "Anti-hipertensivo/ Antianginoso/ Antiarrítmico (bloqueador do canal de cálcio)" },
-  "Vitaminas do complexo B": { "grupo": "Vitaminas", "classe": "Suplemento vitamínico" }
+﻿{
+  "Acebrofilina": {
+    "grupo": "Sistema Respiratório",
+    "classe": "Broncodilatador/ Mucolítico e Expectorante"
+  },
+  "Acetato de retinol + Colecalciferol": {
+    "grupo": "Vitaminas",
+    "classe": "Não informada"
+  },
+  "Aciclovir": {
+    "grupo": "Antivirais",
+    "classe": "Nucleosídeo análogo de purina"
+  },
+  "Ácido acetilsalicílico": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Antiagregante plaquetário"
+  },
+  "Ácido fólico": {
+    "grupo": "Vitaminas",
+    "classe": "Suplemento vitamínico"
+  },
+  "Ácido valproico": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Anticonvulsivante"
+  },
+  "Albendazol": {
+    "grupo": "Antiparasitários",
+    "classe": "Anti-helmíntico"
+  },
+  "Alendronato de sódio": {
+    "grupo": "Tratamento e Prevenção da Osteoporose da Osteoporose",
+    "classe": "Bisfosfonato"
+  },
+  "Alopurinol": {
+    "grupo": "Medicamentos utilizados no tratamento da gota no tratamento da gota",
+    "classe": "Antigotoso"
+  },
+  "Aminofilina": {
+    "grupo": "Sistema Respiratório",
+    "classe": "Broncodilatador"
+  },
+  "Amiodarona": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Antiarrítimico"
+  },
+  "Amitriptilina": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Antidepressivo e Estabilizador do Humor"
+  },
+  "Amoxicilina": {
+    "grupo": "Antibacterianos",
+    "classe": "Penicilina"
+  },
+  "Amoxicilina + Clavulanato de Potássio": {
+    "grupo": "Antibacterianos",
+    "classe": "lactamase"
+  },
+  "Anlodipino": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Anti-hipertensivo (bloqueador de canal de cálcio)"
+  },
+  "Atenolol": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Anti-hipertensivo (bloqueador beta adrenérgico)"
+  },
+  "Azitromicina": {
+    "grupo": "Antibacterianos",
+    "classe": "Macrolídeo"
+  },
+  "Biperideno": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Antiparkinsoniano"
+  },
+  "Bromazepam": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Ansiolítico e Sedativo"
+  },
+  "Captopril": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Anti-hipertensivo (inibidor da enzima conversora de angiotensina)"
+  },
+  "Carbamazepina": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Anticonvulsivante/ Antidepressivo e Estabilizador do Humor"
+  },
+  "Carbonato de cálcio": {
+    "grupo": "Suplementos Minerais Minerais",
+    "classe": "Reposição mineral de cálcio"
+  },
+  "Carbonato de lítio": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Antidepressivo e Estabilizador do Humor"
+  },
+  "Carvedilol": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Anti-hipertensivo (beta bloqueador adrenérgico)"
+  },
+  "Cefalexina": {
+    "grupo": "Antibacterianos",
+    "classe": "Cefalosporina"
+  },
+  "Cinarizina": {
+    "grupo": "Sistema Digestório Digestório",
+    "classe": "Antivertiginoso"
+  },
+  "Ciprofloxacino": {
+    "grupo": "Antibacterianos",
+    "classe": "Quinolona"
+  },
+  "Clindamicina": {
+    "grupo": "Antibacterianos",
+    "classe": "Lincosamida"
+  },
+  "Clomipramina": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Antidepressivo e Estabilizador do Humor"
+  },
+  "Clonazepam": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Ansiolítico e Sedativo"
+  },
+  "Cloreto de potássio": {
+    "grupo": "Correção de Eletrólitos Eletrólitos",
+    "classe": "Repositor eletrolítico de potássio"
+  },
+  "Cloreto de sódio": {
+    "grupo": "Sistema Respiratório",
+    "classe": "Fluidificante"
+  },
+  "Clorpromazina": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Antipsicótico"
+  },
+  "Decanoato de haloperidol": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Não informada"
+  },
+  "Desogestrel + Etinilestradiol": {
+    "grupo": "Sistema Geniturinário e Reprodutor e Reprodutor",
+    "classe": "Não informada"
+  },
+  "Dexametasona": {
+    "grupo": "Anti-inflamatórios",
+    "classe": "Esteroides"
+  },
+  "Diazepam": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Ansiolítico e Sedativo"
+  },
+  "Digoxina": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Glicosídeo cardíaco"
+  },
+  "Dimenidrinato + Piridoxina": {
+    "grupo": "Sistema Digestório Digestório",
+    "classe": "Antiemético"
+  },
+  "Dipirona": {
+    "grupo": "Analgésicos e Antipiréticos Antipiréticos",
+    "classe": "Analgésico não opioide/ Antipirético"
+  },
+  "Doxazosina": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Anti-hipertensivo (alfa bloqueador)"
+  },
+  "Doxiciclina": {
+    "grupo": "Antibacterianos",
+    "classe": "Tetraciclina"
+  },
+  "Enalapril": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Anti-hipertensivo (inibidor da enzima conversora de angiotensina)"
+  },
+  "Enantato de noretisterona": {
+    "grupo": "Sem classificação",
+    "classe": "Não informada"
+  },
+  "Valerato de estradiol": {
+    "grupo": "Sem classificação",
+    "classe": "Não informada"
+  },
+  "Escopolamina": {
+    "grupo": "Sistema Digestório Digestório",
+    "classe": "Antiespasmódico"
+  },
+  "Espironolactona": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Diurético (poupador de potássio)"
+  },
+  "Estriol": {
+    "grupo": "Sistema Geniturinário e Reprodutor e Reprodutor",
+    "classe": "Terapia de reposição hormonal"
+  },
+  "Estrogênios conjugados": {
+    "grupo": "Sem classificação",
+    "classe": "Não informada"
+  },
+  "Fenitoína": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Anticonvulsivante"
+  },
+  "Fenobarbital": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Anticonvulsivante"
+  },
+  "Finasterida": {
+    "grupo": "Sistema Geniturinário e Reprodutor e Reprodutor",
+    "classe": "Antiandrógeno inibidor da 5-alfarredutase"
+  },
+  "Fluconazol": {
+    "grupo": "Antifúngicos",
+    "classe": "Triazólico"
+  },
+  "Fluocinolona + Neomicina": {
+    "grupo": "Sem classificação",
+    "classe": "Não informada"
+  },
+  "Fluoxetina": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Antidepressivo e Estabilizador do Humor"
+  },
+  "Furosemida": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Diurético (alça)"
+  },
+  "Glibenclamida": {
+    "grupo": "Sistema Endócrino Endócrino",
+    "classe": "Antidiabético (sulfonilureia)"
+  },
+  "Gliclazida": {
+    "grupo": "Sistema Endócrino Endócrino",
+    "classe": "Antidiabético (sulfonilureia)"
+  },
+  "Guaco": {
+    "grupo": "Sistema Respiratório",
+    "classe": "Expectorante fitoterápico"
+  },
+  "Haloperidol": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Antipsicótico"
+  },
+  "Hidroclorotiazida": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Diurético (tiazídico)"
+  },
+  "Hidróxido de alumínio": {
+    "grupo": "Sem classificação",
+    "classe": "Não informada"
+  },
+  "Ibuprofeno": {
+    "grupo": "Anti-inflamatórios",
+    "classe": "Não esteroides"
+  },
+  "Imipramina": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Antidepressivo e Estabilizador do Humor"
+  },
+  "Imiquimode": {
+    "grupo": "Imunomodulador",
+    "classe": "Imidazoquinolina"
+  },
+  "Insulina Humana NPH": {
+    "grupo": "Sem classificação",
+    "classe": "Não informada"
+  },
+  "Insulina Humana Regular": {
+    "grupo": "Sem classificação",
+    "classe": "Não informada"
+  },
+  "Ivermectina": {
+    "grupo": "Antiparasitários",
+    "classe": "Anti-helmíntico"
+  },
+  "Levodopa + Benserazida": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Não informada"
+  },
+  "Levodopa + Carbidopa": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Não informada"
+  },
+  "Levomepromazina": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Antipsicótico"
+  },
+  "Levonorgestrel": {
+    "grupo": "Sistema Geniturinário e Reprodutor e Reprodutor",
+    "classe": "Contraceptivo hormonal de emergência"
+  },
+  "Levonorgestrel + Etinilestradiol": {
+    "grupo": "Sistema Geniturinário e Reprodutor e Reprodutor",
+    "classe": "Não informada"
+  },
+  "Levotiroxina": {
+    "grupo": "Sistema Endócrino Endócrino",
+    "classe": "Hormônio tireoidiano"
+  },
+  "Loratadina": {
+    "grupo": "Antialérgicos",
+    "classe": "Antagonista de receptor de histamina"
+  },
+  "Losartana": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Anti-hipertensivo (antagonista de receptor de angiotensina II)"
+  },
+  "Manitol": {
+    "grupo": "Sistema Digestório Digestório",
+    "classe": "colonoscopia, com apresentação do pedido de exame)"
+  },
+  "Medroxiprogesterona": {
+    "grupo": "Sistema Geniturinário e Reprodutor e Reprodutor",
+    "classe": "Contraceptivo hormonal"
+  },
+  "Metformina": {
+    "grupo": "Sistema Endócrino Endócrino",
+    "classe": "Antidiabético (biguanida)"
+  },
+  "Metildopa": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Anti-hipertensivo de ação central"
+  },
+  "Metronidazol": {
+    "grupo": "Antiparasitários",
+    "classe": "Antiprotozoário"
+  },
+  "Miconazol": {
+    "grupo": "Antifúngicos",
+    "classe": "Antifúngico"
+  },
+  "Neomicina + Bacitracina": {
+    "grupo": "Antibacterianos",
+    "classe": "aminoglicosídeo tópico"
+  },
+  "Nimesulida": {
+    "grupo": "Anti-inflamatórios",
+    "classe": "Não esteroides"
+  },
+  "Nirmatrelvir + Ritonavir": {
+    "grupo": "Sem classificação",
+    "classe": "Não informada"
+  },
+  "Nistatina": {
+    "grupo": "Antifúngicos",
+    "classe": "Antifúngico"
+  },
+  "Nitrazepam": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Ansiolítico e Sedativo"
+  },
+  "Nitrofurantoína": {
+    "grupo": "Antibacterianos",
+    "classe": "Nitrofurano"
+  },
+  "Noretisterona": {
+    "grupo": "Sistema Geniturinário e Reprodutor e Reprodutor",
+    "classe": "Terapia de reposição hormonal/ Contraceptivo"
+  },
+  "Óleo mineral": {
+    "grupo": "Sistema Digestório Digestório",
+    "classe": "Laxativo"
+  },
+  "Omeprazol": {
+    "grupo": "Sistema Digestório Digestório",
+    "classe": "Antisecretor (inibidor da bomba de próton)"
+  },
+  "Oseltamivir": {
+    "grupo": "Antivirais",
+    "classe": "Inibidor de neuraminidase"
+  },
+  "Palmitato de retinol": {
+    "grupo": "Pele e Mucosas Mucosas",
+    "classe": "Cicatrizante, emoliente e"
+  },
+  "Colecalciferol + Óxido de zinco": {
+    "grupo": "Pele e Mucosas Mucosas",
+    "classe": "Não informada"
+  },
+  "Paracetamol": {
+    "grupo": "Analgésicos e Antipiréticos Antipiréticos",
+    "classe": "Analgésico não opioide/ Antipirético"
+  },
+  "Permetrina": {
+    "grupo": "Antiparasitários",
+    "classe": "Ectoparasiticida"
+  },
+  "Prednisolona": {
+    "grupo": "Anti-inflamatórios",
+    "classe": "Esteroides"
+  },
+  "Prednisona": {
+    "grupo": "Anti-inflamatórios",
+    "classe": "Esteroides"
+  },
+  "Prometazina": {
+    "grupo": "Antialérgicos",
+    "classe": "Antagonista de receptor de histamina"
+  },
+  "Propatilnitrato": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Vasodilatador"
+  },
+  "Propranolol": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Anti-hipertensivo (bloqueador beta adrenérgico)"
+  },
+  "Sais para reidratação oral": {
+    "grupo": "Sem classificação",
+    "classe": "Não informada"
+  },
+  "Sertralina": {
+    "grupo": "Sistema Nervoso Central Central",
+    "classe": "Antidepressivo e Estabilizador do Humor"
+  },
+  "Simeticona": {
+    "grupo": "Sistema Digestório Digestório",
+    "classe": "Antiflatulento"
+  },
+  "Sinvastatina": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Estatina"
+  },
+  "Sulfametoxazol + Trimetoprima": {
+    "grupo": "Antibacterianos",
+    "classe": "Não informada"
+  },
+  "Sulfato ferroso": {
+    "grupo": "Suplementos Minerais Minerais",
+    "classe": "Reposição mineral de ferro"
+  },
+  "Tobramicina": {
+    "grupo": "Antibacterianos",
+    "classe": "Antibacteriano aminoglicosídeo oftálmico"
+  },
+  "Varfarina": {
+    "grupo": "Anticoagulantes",
+    "classe": "Antagonista da vitamina K"
+  },
+  "Verapamil": {
+    "grupo": "Sistema Cardiovascular e Renal e Renal",
+    "classe": "Anti-hipertensivo/ Antianginoso/ Antiarrítimico (bloqueador do canal de cálcio)"
+  },
+  "Vitaminas do complexo B": {
+    "grupo": "Sem classificação",
+    "classe": "Não informada"
+  }
 }

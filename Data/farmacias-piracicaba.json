@@ -1,6 +1,6 @@
-{
+﻿{
   "nome": "Farmácias Municipais de Piracicaba",
-  "publicadoEm": "2026-07-30",
+  "publicadoEm": "2026-11-25",
   "url": "https://piracicaba.sp.gov.br/servicos/farmacias-municipais/",
   "itens": [
     {
@@ -12,7 +12,11 @@
       "bairro": "Jardim Alvorada",
       "telefone": "3411-4194",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["UBS Alvorada", "USF Sol Nascente", "USF Chapadão"]
+      "unidadesReferencia": [
+        "UBS Alvorada",
+        "USF Sol Nascente",
+        "USF Chapadão"
+      ]
     },
     {
       "slug": "anhumas",
@@ -23,7 +27,9 @@
       "bairro": "Anhumas",
       "telefone": "3438-4205",
       "horario": "segunda a sexta-feira, das 8h às 12h e das 13h às 16h",
-      "unidadesReferencia": ["UBS Anhumas"]
+      "unidadesReferencia": [
+        "UBS Anhumas"
+      ]
     },
     {
       "slug": "artemis",
@@ -34,7 +40,10 @@
       "bairro": "Ártemis",
       "telefone": "3438-3107",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["USF Artemis I", "USF Artemis II"]
+      "unidadesReferencia": [
+        "USF Artemis I",
+        "USF Artemis II"
+      ]
     },
     {
       "slug": "caxambu",
@@ -45,7 +54,11 @@
       "bairro": "Caxambu",
       "telefone": "3426-5658",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["UBS Caxambu", "USF Astúrias", "USF 1º de Maio"]
+      "unidadesReferencia": [
+        "UBS Caxambu",
+        "USF Asturias",
+        "USF 1º de Maio"
+      ]
     },
     {
       "slug": "cecap",
@@ -56,18 +69,28 @@
       "bairro": "CECAP",
       "telefone": "3414-2430",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["USF Cecap", "USF Eldorado I", "USF Eldorado II", "USF Santa Rita", "USF São Francisco", "UBS Cecap (antigo CRAB)"]
+      "unidadesReferencia": [
+        "USFCecap",
+        "USF Eldorado I",
+        "USF Eldorado II",
+        "USF Santa Rita",
+        "USF São Francisco",
+        "UBSCecap (antigo Crab)"
+      ]
     },
     {
       "slug": "central",
       "nome": "Farmácia Central",
       "tipo": "AtencaoBasica",
       "zonaRural": false,
-      "endereco": "Travessa Newton de Almeida Mello, s/n",
+      "endereco": "Travessa Newton de Almeida Mello, S/N",
       "bairro": "Centro",
       "telefone": "3433-2376",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["UBS Centro", "USF Saúde em Campo – Monte Alegre"]
+      "unidadesReferencia": [
+        "UBS Centro",
+        "USF Saúde em Campo – Monte Alegre"
+      ]
     },
     {
       "slug": "costa-rica",
@@ -78,40 +101,58 @@
       "bairro": "Costa Rica",
       "telefone": "3411-4255",
       "horario": "segunda a sexta-feira, das 7h às 12h e das 13h às 16h",
-      "unidadesReferencia": ["USF Campestre", "USF Costa Rica"]
+      "unidadesReferencia": [
+        "USF Campestre",
+        "USF Costa Rica"
+      ]
     },
     {
       "slug": "coreia-pauliceia",
-      "nome": "Farmácia Coreia (Paulicéia)",
+      "nome": "Farmácia Coreia (Pauliceia)",
       "tipo": "AtencaoBasica",
       "zonaRural": false,
       "endereco": "Rua Santa Helena, 334",
       "bairro": "Paulicéia",
       "telefone": "3433-8682",
       "horario": "segunda a sexta-feira, das 7h às 12h e das 13h às 16h",
-      "unidadesReferencia": ["UBS Paulicéia"]
+      "unidadesReferencia": [
+        "UBS Pauliceia"
+      ]
     },
     {
       "slug": "mario-dedini",
-      "nome": "Farmácia UBS Mário Dedini",
+      "nome": "Farmácia UBS MarioDedini (antigo Crab)",
       "tipo": "AtencaoBasica",
       "zonaRural": false,
       "endereco": "Rua Nadir Eraldo Stella, 137",
-      "bairro": "Mário Dedini",
+      "bairro": "Mario Dedini",
       "telefone": "3413-4245",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["USF Mário Dedini I", "USF Mário Dedini II", "USF Bosque dos Lenheiros I", "USF Bosque dos Lenheiros II", "USF Vila Industrial", "USF Jardim Gilda"]
+      "unidadesReferencia": [
+        "USF Mario Dedini I",
+        "USF Mario Dedini II",
+        "USF Bosque dos Lenheiros I",
+        "USF Bosque dos Lenheiros II",
+        "USF Vila Industrial",
+        "USF Jardim Gilda"
+      ]
     },
     {
       "slug": "ubs-vila-sonia",
-      "nome": "Farmácia UBS Vila Sônia",
+      "nome": "Farmácia UBS VilaSônia (antigo Crab)",
       "tipo": "AtencaoBasica",
       "zonaRural": false,
       "endereco": "Rua Palmital, s/n",
       "bairro": "Vila Sônia",
       "telefone": "3413-4508",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["UBS Vila Sônia", "USF Parque Orlanda", "USF Boa Esperança I", "USF Santana", "USF Vem Viver"]
+      "unidadesReferencia": [
+        "UBS Vila Sônia",
+        "USF Parque Orlanda",
+        "USF Boa Esperança I",
+        "USF Santana",
+        "USF Vem Viver"
+      ]
     },
     {
       "slug": "esplanada",
@@ -122,7 +163,10 @@
       "bairro": "Jardim Esplanada",
       "telefone": "3422-7923",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["UBS Esplanada", "UBS Paulista (antigo CRAB)"]
+      "unidadesReferencia": [
+        "UBS Esplanada",
+        "UBS Paulista (antigo Crab)"
+      ]
     },
     {
       "slug": "ibitiruna",
@@ -133,7 +177,9 @@
       "bairro": "Ibitiruna",
       "telefone": "3438-4126",
       "horario": "segunda a sexta-feira, das 8h30 às 12h e das 13h às 15h30",
-      "unidadesReferencia": ["UBS Ibitiruna"]
+      "unidadesReferencia": [
+        "UBS Ibitiruna"
+      ]
     },
     {
       "slug": "jaragua",
@@ -144,7 +190,10 @@
       "bairro": "Jaraguá",
       "telefone": "3432-1385",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["USF Jaraguá I", "USF Jaraguá II", "USF São José"]
+      "unidadesReferencia": [
+        "USF Jaraguá I",
+        "USF Jaraguá II USF São José."
+      ]
     },
     {
       "slug": "jardim-oriente",
@@ -155,7 +204,11 @@
       "bairro": "Jardim Oriente",
       "telefone": "3426-6182",
       "horario": "terças e quintas-feiras, das 7h às 12h e das 13h às 16h",
-      "unidadesReferencia": ["USF Jardim Oriente", "USF Serra Verde", "USF Monte Feliz"]
+      "unidadesReferencia": [
+        "USF Jardim Oriente",
+        "USF Serra Verde",
+        "USF Monte Feliz"
+      ]
     },
     {
       "slug": "jardim-sao-paulo",
@@ -166,18 +219,26 @@
       "bairro": "Monte Líbano",
       "telefone": "3422-6876",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["USF Monte Líbano I", "USF Monte Líbano II", "USF Jardim das Flores", "USF Itapuã I", "USF Itapuã II"]
+      "unidadesReferencia": [
+        "USF Monte Libano I",
+        "USF Monte Libano II",
+        "USF Jardim das Flores",
+        "USF Itapuã I",
+        "USF Itapuã II"
+      ]
     },
     {
       "slug": "jupia",
       "nome": "Farmácia Jupiá",
       "tipo": "AtencaoBasica",
       "zonaRural": false,
-      "endereco": "Rua João Eudóxio da Silva, s/n",
+      "endereco": "Rua João Eudóxio da Silva, S/N",
       "bairro": "Jupiá",
       "telefone": "3427-2865",
       "horario": "segunda a sexta-feira, das 7h às 12h e das 13h às 16h",
-      "unidadesReferencia": ["UBS Jupiá"]
+      "unidadesReferencia": [
+        "UBS Jupiá"
+      ]
     },
     {
       "slug": "novo-horizonte",
@@ -188,7 +249,11 @@
       "bairro": "Novo Horizonte",
       "telefone": "3425-3232",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["UBS Novo Horizonte", "USF Kobayat Líbano", "USF Santa Fé"]
+      "unidadesReferencia": [
+        "UBS Novo Horizonte",
+        "USF Kobayat Libano",
+        "USF Santa Fé"
+      ]
     },
     {
       "slug": "piracicamirim",
@@ -199,8 +264,13 @@
       "bairro": "Piracicamirim",
       "telefone": "3426-1668",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["UBS Piracicamirim (antigo CRAB)", "UBS Independência"],
-      "aliases": ["Piracicamirim"]
+      "unidadesReferencia": [
+        "UBS Piracicamirim (Antigo Crab)",
+        "UBS Independência"
+      ],
+      "aliases": [
+        "Piracicamirim"
+      ]
     },
     {
       "slug": "planalto",
@@ -211,7 +281,11 @@
       "bairro": "Planalto",
       "telefone": "3434-7100",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["UBS Planalto", "USF Paineiras", "USF Jardim Vitória"]
+      "unidadesReferencia": [
+        "UBS Planalto",
+        "USF Paineiras",
+        "USF Jardim Vitória"
+      ]
     },
     {
       "slug": "santa-terezinha",
@@ -222,41 +296,55 @@
       "bairro": "Santa Terezinha",
       "telefone": "3415-3373",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["UBS Santa Terezinha (antigo CRAB)", "USF IAA I", "USF IAA II"]
+      "unidadesReferencia": [
+        "UBS Santa Terezinha (Antigo Crab)",
+        "USF IAA I",
+        "USF IAA II"
+      ]
     },
     {
       "slug": "tanquinho",
       "nome": "Farmácia Tanquinho",
       "tipo": "AtencaoBasica",
-      "zonaRural": true,
-      "endereco": "Rua Américo Faganello, s/n",
+      "zonaRural": false,
+      "endereco": "Rua Américo Faganello, S/N",
       "bairro": "Tanquinho",
       "telefone": "3431-1115",
       "horario": "segunda a sexta-feira, das 8h às 12h",
-      "unidadesReferencia": ["UBS Tanquinho"]
+      "unidadesReferencia": [
+        "UBS Tanquinho"
+      ]
     },
     {
       "slug": "tupi",
       "nome": "Farmácia Tupi",
       "tipo": "AtencaoBasica",
       "zonaRural": false,
-      "endereco": "Rua Piracicaba, s/n",
+      "endereco": "Rua Piracicaba, S/N",
       "bairro": "Tupi",
       "telefone": "3438-7454",
       "horario": "segunda a sexta-feira, das 7h às 12h e das 13h às 16h",
-      "unidadesReferencia": ["USF Tupi"]
+      "unidadesReferencia": [
+        "USF Tupi"
+      ]
     },
     {
       "slug": "vila-cristina",
       "nome": "Farmácia Vila Cristina",
       "tipo": "AtencaoBasica",
       "zonaRural": false,
-      "endereco": "Av. Madre Maria Theodora, 1077, sala 14",
+      "endereco": "Av. Madre Maria Theorora,1077",
       "bairro": "Vila Cristina",
       "telefone": "3435-1853",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["UBS Vila Cristina", "USF Tatuapé I", "USF Tatuapé II"],
-      "aliases": ["Vila Cristina"]
+      "unidadesReferencia": [
+        "UBS Vila Cristina",
+        "USF Tatuapé I",
+        "USF Tatuapé II"
+      ],
+      "aliases": [
+        "Vila Cristina"
+      ]
     },
     {
       "slug": "jardim-primavera",
@@ -267,8 +355,13 @@
       "bairro": "Jardim Primavera",
       "telefone": "3413-7907",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["USF Vila Fátima", "USF Jardim Primavera"],
-      "aliases": ["Vila Fátima"],
+      "unidadesReferencia": [
+        "USF Vila Fátima",
+        "USF Jardim Primavera"
+      ],
+      "aliases": [
+        "Vila Fátima"
+      ],
       "observacao": "Atende no Centro Comunitário do Jardim Primavera, no lugar da antiga Farmácia Vila Fátima."
     },
     {
@@ -280,8 +373,17 @@
       "bairro": "Vila Rezende",
       "telefone": "3421-3879",
       "horario": "todos os dias, das 7h às 16h",
-      "unidadesReferencia": ["USF Saúde em Campo – Parque São Jorge", "UBS Algodoal", "UBS Vila Rezende (antigo CRAB)", "USF Santa Rosa I", "USF Santa Rosa II", "USF Algodoal"],
-      "aliases": ["Vila Rezende"]
+      "unidadesReferencia": [
+        "USF Saúde Em Campo – Parque São Jorge",
+        "UBS Algodoal",
+        "UBS Vila Rezende (Antigo Crab)",
+        "USF Santa Rosa I",
+        "USF Santa Rosa II",
+        "USF Algodoal"
+      ],
+      "aliases": [
+        "Vila Rezende"
+      ]
     },
     {
       "slug": "vila-sonia",
@@ -292,8 +394,15 @@
       "bairro": "Vila Sônia",
       "telefone": "3415-3405",
       "horario": "segunda a sexta-feira, das 7h às 16h",
-      "unidadesReferencia": ["UBS Parque Piracicaba", "USF Boa Esperança II", "USF Gran Park", "USF Javari"],
-      "aliases": ["Vila Sônia"]
+      "unidadesReferencia": [
+        "UBS Parque Piracicaba",
+        "USF Boa Esperança II",
+        "USF Gran Park",
+        "USF Javari"
+      ],
+      "aliases": [
+        "Vila Sônia"
+      ]
     },
     {
       "slug": "alto-custo",
@@ -318,7 +427,9 @@
       "telefone": "3437-7504",
       "horario": "segunda a sexta-feira, das 7h às 16h45",
       "unidadesReferencia": [],
-      "aliases": ["CEDIC"],
+      "aliases": [
+        "CEDIC"
+      ],
       "observacao": "Dispensa medicamentos do componente estratégico (HIV, hepatites, tuberculose, hanseníase e outras). Alguns itens da REMUME saem só daqui."
     }
   ]
