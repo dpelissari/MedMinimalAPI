@@ -1,7 +1,7 @@
 using System.ComponentModel;
 using System.Reflection;
 
-namespace MedMinimalApi.Extensions
+namespace PiraRemumeApi.Extensions
 {
     public static class EnumExtensions
     {

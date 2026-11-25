@@ -1,0 +1,1079 @@
+﻿{
+  "nome": "REMUME Piracicaba",
+  "publicadoEm": "2026-11-25",
+  "url": "https://piracicaba.sp.gov.br/wp-content/uploads/2024/08/REMUME-2023-Grupo-Farmacologico-07-24.pdf",
+  "itens": [
+    {
+      "nome": "Acebrofilina",
+      "apresentacoes": [
+        {
+          "descricao": "10 mg/mL xarope"
+        },
+        {
+          "descricao": "5 mg/mL xarope"
+        }
+      ]
+    },
+    {
+      "nome": "Acetato de retinol + Colecalciferol",
+      "apresentacoes": [
+        {
+          "descricao": "50.000 UI/mL + 10.000 UI/mL"
+        },
+        {
+          "descricao": "solução oral gotas"
+        }
+      ]
+    },
+    {
+      "nome": "Aciclovir",
+      "apresentacoes": [
+        {
+          "descricao": "200 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Ácido acetilsalicílico",
+      "apresentacoes": [
+        {
+          "descricao": "100 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Ácido fólico",
+      "apresentacoes": [
+        {
+          "descricao": "5 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Ácido valproico",
+      "apresentacoes": [
+        {
+          "descricao": "250 mg cápsula"
+        }
+      ]
+    },
+    {
+      "nome": "Albendazol",
+      "apresentacoes": [
+        {
+          "descricao": "40 mg/mL suspensão oral"
+        }
+      ]
+    },
+    {
+      "nome": "Alendronato de sódio",
+      "apresentacoes": [
+        {
+          "descricao": "70 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Alopurinol",
+      "apresentacoes": [
+        {
+          "descricao": "100 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Aminofilina",
+      "apresentacoes": [
+        {
+          "descricao": "100 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Amiodarona",
+      "apresentacoes": [
+        {
+          "descricao": "200 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Amitriptilina",
+      "apresentacoes": [
+        {
+          "descricao": "25 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Amoxicilina",
+      "apresentacoes": [
+        {
+          "descricao": "50 mg/mL suspensão oral"
+        },
+        {
+          "descricao": "500 mg cápsula"
+        }
+      ]
+    },
+    {
+      "nome": "Amoxicilina + Clavulanato de Potássio",
+      "apresentacoes": [
+        {
+          "descricao": "500mg + 125mg comprimido"
+        },
+        {
+          "descricao": "400mg + 57mg suspensão oral"
+        }
+      ]
+    },
+    {
+      "nome": "Anlodipino",
+      "apresentacoes": [
+        {
+          "descricao": "5 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Atenolol",
+      "apresentacoes": [
+        {
+          "descricao": "25 mg comprimido"
+        },
+        {
+          "descricao": "50 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Azitromicina",
+      "apresentacoes": [
+        {
+          "descricao": "40 mg/mL suspensão oral"
+        },
+        {
+          "descricao": "500 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Biperideno",
+      "apresentacoes": [
+        {
+          "descricao": "2 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Bromazepam",
+      "apresentacoes": [
+        {
+          "descricao": "3 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Captopril",
+      "apresentacoes": [
+        {
+          "descricao": "25 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Carbamazepina",
+      "apresentacoes": [
+        {
+          "descricao": "20 mg/mL suspensão oral"
+        },
+        {
+          "descricao": "200 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Carbonato de cálcio",
+      "apresentacoes": [
+        {
+          "descricao": "1250 mg comprimido (equival. 500"
+        },
+        {
+          "descricao": "mg de cálcio)"
+        }
+      ]
+    },
+    {
+      "nome": "Carbonato de lítio",
+      "apresentacoes": [
+        {
+          "descricao": "300 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Carvedilol",
+      "apresentacoes": [
+        {
+          "descricao": "3,125 mg comprimido"
+        },
+        {
+          "descricao": "12,5 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Cefalexina",
+      "apresentacoes": [
+        {
+          "descricao": "50 mg/mL suspensão oral"
+        },
+        {
+          "descricao": "500 mg cápsula ou comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Cinarizina",
+      "apresentacoes": [
+        {
+          "descricao": "75 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Ciprofloxacino",
+      "apresentacoes": [
+        {
+          "descricao": "500 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Clindamicina",
+      "apresentacoes": [
+        {
+          "descricao": "300 mg cápsula"
+        }
+      ]
+    },
+    {
+      "nome": "Clomipramina",
+      "apresentacoes": [
+        {
+          "descricao": "25 mg drágea"
+        }
+      ]
+    },
+    {
+      "nome": "Clonazepam",
+      "apresentacoes": [
+        {
+          "descricao": "2 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Cloreto de potássio",
+      "apresentacoes": [
+        {
+          "descricao": "600 mg drágea"
+        }
+      ]
+    },
+    {
+      "nome": "Cloreto de sódio",
+      "apresentacoes": [
+        {
+          "descricao": "9 mg/mL solução uso nasal"
+        }
+      ]
+    },
+    {
+      "nome": "Clorpromazina",
+      "apresentacoes": [
+        {
+          "descricao": "100 mg comprimido"
+        },
+        {
+          "descricao": "25 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Decanoato de haloperidol",
+      "apresentacoes": [
+        {
+          "descricao": "50 mg/mL de Haloperidol solução"
+        },
+        {
+          "descricao": "injetável ampola IM"
+        }
+      ]
+    },
+    {
+      "nome": "Desogestrel + Etinilestradiol",
+      "apresentacoes": [
+        {
+          "descricao": "0,15 mg + 0,03 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Dexametasona",
+      "apresentacoes": [
+        {
+          "descricao": "1 mg/g creme"
+        }
+      ]
+    },
+    {
+      "nome": "Diazepam",
+      "apresentacoes": [
+        {
+          "descricao": "10 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Digoxina",
+      "apresentacoes": [
+        {
+          "descricao": "0,25 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Dimenidrinato + Piridoxina",
+      "apresentacoes": [
+        {
+          "descricao": "25 mg/mL + 5 mg/mL solução oral"
+        },
+        {
+          "descricao": "gotas"
+        },
+        {
+          "descricao": "50 mg + 10 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Dipirona",
+      "apresentacoes": [
+        {
+          "descricao": "500 mg/mL solução oral gotas"
+        }
+      ]
+    },
+    {
+      "nome": "Doxazosina",
+      "apresentacoes": [
+        {
+          "descricao": "2 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Doxiciclina",
+      "apresentacoes": [
+        {
+          "descricao": "100 mg comprimido revestido"
+        },
+        {
+          "descricao": "100 mg comprimido solúvel",
+          "abrangencia": "Restrito",
+          "observacao": "crianças até 45 kg",
+          "unidades": [
+            "Vila Cristina",
+            "Vila Rezende",
+            "Vila Sônia",
+            "Piracicamirim"
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Enalapril",
+      "apresentacoes": [
+        {
+          "descricao": "10 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Enantato de noretisterona",
+      "apresentacoes": [
+        {
+          "descricao": "+ 50 mg/mL + 5 mg/mL solução"
+        }
+      ]
+    },
+    {
+      "nome": "Valerato de estradiol",
+      "apresentacoes": [
+        {
+          "descricao": "injetável frasco ampola IM"
+        }
+      ]
+    },
+    {
+      "nome": "Escopolamina",
+      "apresentacoes": [
+        {
+          "descricao": "10 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Espironolactona",
+      "apresentacoes": [
+        {
+          "descricao": "25 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Estriol",
+      "apresentacoes": [
+        {
+          "descricao": "1 mg/g creme vaginal"
+        }
+      ]
+    },
+    {
+      "nome": "Estrogênios conjugados",
+      "apresentacoes": [
+        {
+          "descricao": "0,625 mg drágea"
+        }
+      ]
+    },
+    {
+      "nome": "Fenitoína",
+      "apresentacoes": [
+        {
+          "descricao": "100 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Fenobarbital",
+      "apresentacoes": [
+        {
+          "descricao": "40 mg/mL solução oral gotas"
+        },
+        {
+          "descricao": "100 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Finasterida",
+      "apresentacoes": [
+        {
+          "descricao": "5 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Fluconazol",
+      "apresentacoes": [
+        {
+          "descricao": "150 mg cápsula"
+        }
+      ]
+    },
+    {
+      "nome": "Fluocinolona + Neomicina",
+      "apresentacoes": [
+        {
+          "descricao": "+ solução otológica"
+        }
+      ]
+    },
+    {
+      "nome": "Fluoxetina",
+      "apresentacoes": [
+        {
+          "descricao": "20 mg cápsula"
+        }
+      ]
+    },
+    {
+      "nome": "Furosemida",
+      "apresentacoes": [
+        {
+          "descricao": "40 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Glibenclamida",
+      "apresentacoes": [
+        {
+          "descricao": "5 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Gliclazida",
+      "apresentacoes": [
+        {
+          "descricao": "30 mg comprimido de liberação"
+        },
+        {
+          "descricao": "prolongada"
+        }
+      ]
+    },
+    {
+      "nome": "Guaco",
+      "apresentacoes": [
+        {
+          "descricao": "xarope"
+        }
+      ]
+    },
+    {
+      "nome": "Haloperidol",
+      "apresentacoes": [
+        {
+          "descricao": "2 mg/mL solução oral gotas"
+        },
+        {
+          "descricao": "1 mg comprimido"
+        },
+        {
+          "descricao": "5 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Hidroclorotiazida",
+      "apresentacoes": [
+        {
+          "descricao": "25 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Hidróxido de alumínio",
+      "apresentacoes": [
+        {
+          "descricao": "+ suspensão oral"
+        }
+      ]
+    },
+    {
+      "nome": "Ibuprofeno",
+      "apresentacoes": [
+        {
+          "descricao": "100 mg/mL suspensão oral gotas"
+        },
+        {
+          "descricao": "600 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Imipramina",
+      "apresentacoes": [
+        {
+          "descricao": "25 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Imiquimode",
+      "apresentacoes": [
+        {
+          "descricao": "50 mg/g creme",
+          "abrangencia": "Restrito",
+          "unidades": [
+            "CEDIC"
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Insulina Humana NPH",
+      "apresentacoes": [
+        {
+          "descricao": "100 UI/mL suspensão injetável"
+        },
+        {
+          "descricao": "frasco ampola SC"
+        },
+        {
+          "descricao": "100 UI/mL suspensão injetável"
+        },
+        {
+          "descricao": "caneta aplicadora SC (faixa etária"
+        },
+        {
+          "descricao": "específica conforme protocolo do Ministério"
+        },
+        {
+          "descricao": "da Saúde)"
+        }
+      ]
+    },
+    {
+      "nome": "Insulina Humana Regular",
+      "apresentacoes": [
+        {
+          "descricao": "100 UI/mL solução injetável frasco"
+        },
+        {
+          "descricao": "ampola SC"
+        },
+        {
+          "descricao": "100 UI/mL solução injetável caneta"
+        },
+        {
+          "descricao": "aplicadora SC (faixa etária específica"
+        },
+        {
+          "descricao": "conforme protocolo do Ministério da Saúde)"
+        }
+      ]
+    },
+    {
+      "nome": "Ivermectina",
+      "apresentacoes": [
+        {
+          "descricao": "6 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Levodopa + Benserazida",
+      "apresentacoes": [
+        {
+          "descricao": "100 mg + 25 mg cápsula de"
+        },
+        {
+          "descricao": "liberação prolongada"
+        },
+        {
+          "descricao": "100 mg + 25 mg comprimido"
+        },
+        {
+          "descricao": "200 mg + 50 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Levodopa + Carbidopa",
+      "apresentacoes": [
+        {
+          "descricao": "250 mg + 25 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Levomepromazina",
+      "apresentacoes": [
+        {
+          "descricao": "40 mg/mL solução oral gotas"
+        },
+        {
+          "descricao": "100 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Levonorgestrel",
+      "apresentacoes": [
+        {
+          "descricao": "0,75 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Levonorgestrel + Etinilestradiol",
+      "apresentacoes": [
+        {
+          "descricao": "0,15 mg + 0,03 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Levotiroxina",
+      "apresentacoes": [
+        {
+          "descricao": "100 mcg comprimido"
+        },
+        {
+          "descricao": "25 mcg comprimido"
+        },
+        {
+          "descricao": "50 mcg comprimido"
+        },
+        {
+          "descricao": "75 mcg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Loratadina",
+      "apresentacoes": [
+        {
+          "descricao": "1 mg/mL xarope"
+        },
+        {
+          "descricao": "10 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Losartana",
+      "apresentacoes": [
+        {
+          "descricao": "50 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Manitol",
+      "apresentacoes": [
+        {
+          "descricao": "20% solução oral",
+          "abrangencia": "Restrito",
+          "observacao": "com apresentação do pedido de exame de colonoscopia",
+          "unidades": [
+            "Vila Cristina",
+            "Vila Rezende",
+            "Vila Sônia",
+            "Piracicamirim"
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Medroxiprogesterona",
+      "apresentacoes": [
+        {
+          "descricao": "150 mg/mL suspensão injetável"
+        },
+        {
+          "descricao": "frasco ampola IM"
+        }
+      ]
+    },
+    {
+      "nome": "Metformina",
+      "apresentacoes": [
+        {
+          "descricao": "850 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Metildopa",
+      "apresentacoes": [
+        {
+          "descricao": "250 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Metronidazol",
+      "apresentacoes": [
+        {
+          "descricao": "40 mg/mL suspensão oral"
+        },
+        {
+          "descricao": "100 mg/g geleia vaginal"
+        },
+        {
+          "descricao": "250 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Miconazol",
+      "apresentacoes": [
+        {
+          "descricao": "20 mg/g creme vaginal"
+        }
+      ]
+    },
+    {
+      "nome": "Neomicina + Bacitracina",
+      "apresentacoes": [
+        {
+          "descricao": "5 mg/g + 250 UI/g pomada"
+        }
+      ]
+    },
+    {
+      "nome": "Nimesulida",
+      "apresentacoes": [
+        {
+          "descricao": "100 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Nirmatrelvir + Ritonavir",
+      "apresentacoes": [
+        {
+          "descricao": "150 mg + 100 mg",
+          "abrangencia": "Restrito",
+          "unidades": [
+            "Vila Cristina",
+            "Vila Rezende",
+            "Vila Sônia",
+            "Piracicamirim"
+          ]
+        }
+      ]
+    },
+    {
+      "nome": "Nistatina",
+      "apresentacoes": [
+        {
+          "descricao": "100.000 UI/mL suspensão oral"
+        }
+      ]
+    },
+    {
+      "nome": "Nitrazepam",
+      "apresentacoes": [
+        {
+          "descricao": "5 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Nitrofurantoína",
+      "apresentacoes": [
+        {
+          "descricao": "100 mg cápsula"
+        }
+      ]
+    },
+    {
+      "nome": "Noretisterona",
+      "apresentacoes": [
+        {
+          "descricao": "0,35 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Óleo mineral",
+      "apresentacoes": [
+        {
+          "descricao": "óleo"
+        }
+      ]
+    },
+    {
+      "nome": "Omeprazol",
+      "apresentacoes": [
+        {
+          "descricao": "20 mg cápsula"
+        }
+      ]
+    },
+    {
+      "nome": "Oseltamivir",
+      "apresentacoes": [
+        {
+          "descricao": "30mg cápsula",
+          "abrangencia": "Restrito",
+          "unidades": [
+            "Vila Cristina"
+          ]
+        },
+        {
+          "descricao": "45mg cápsula Vila Rezende, Vila Sônia e"
+        },
+        {
+          "descricao": "75mg cápsula Piracicamirim"
+        }
+      ]
+    },
+    {
+      "nome": "Palmitato de retinol",
+      "apresentacoes": [
+        {
+          "descricao": "+ 5.000 UI/g + 900 UI/g + 150 mg/g"
+        }
+      ]
+    },
+    {
+      "nome": "Colecalciferol + Óxido de zinco",
+      "apresentacoes": [
+        {
+          "descricao": "pomada contra assadura"
+        }
+      ]
+    },
+    {
+      "nome": "Paracetamol",
+      "apresentacoes": [
+        {
+          "descricao": "200 mg/mL solução oral gotas"
+        },
+        {
+          "descricao": "500 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Permetrina",
+      "apresentacoes": [
+        {
+          "descricao": "10 mg/mL loção"
+        }
+      ]
+    },
+    {
+      "nome": "Prednisolona",
+      "apresentacoes": [
+        {
+          "descricao": "3 mg/mL solução oral"
+        }
+      ]
+    },
+    {
+      "nome": "Prednisona",
+      "apresentacoes": [
+        {
+          "descricao": "20 mg comprimido"
+        },
+        {
+          "descricao": "5 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Prometazina",
+      "apresentacoes": [
+        {
+          "descricao": "25 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Propatilnitrato",
+      "apresentacoes": [
+        {
+          "descricao": "10 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Propranolol",
+      "apresentacoes": [
+        {
+          "descricao": "40 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Sais para reidratação oral",
+      "apresentacoes": [
+        {
+          "descricao": "pó em envelope"
+        }
+      ]
+    },
+    {
+      "nome": "Sertralina",
+      "apresentacoes": [
+        {
+          "descricao": "50 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Simeticona",
+      "apresentacoes": [
+        {
+          "descricao": "75 mg/mL emulsão oral gotas"
+        }
+      ]
+    },
+    {
+      "nome": "Sinvastatina",
+      "apresentacoes": [
+        {
+          "descricao": "10 mg comprimido"
+        },
+        {
+          "descricao": "20 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Sulfametoxazol + Trimetoprima",
+      "apresentacoes": [
+        {
+          "descricao": "40 mg + 8 mg/mL suspensão oral"
+        },
+        {
+          "descricao": "400 mg + 80 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Sulfato ferroso",
+      "apresentacoes": [
+        {
+          "descricao": "125 mg/mL solução oral gotas"
+        },
+        {
+          "descricao": "(equival. 25 mg/ml de Ferro"
+        },
+        {
+          "descricao": "elementar)"
+        },
+        {
+          "descricao": "comprimido revestido 40 mg de"
+        },
+        {
+          "descricao": "ferro elementar"
+        }
+      ]
+    },
+    {
+      "nome": "Tobramicina",
+      "apresentacoes": [
+        {
+          "descricao": "3 mg/mL solução oftálmica"
+        }
+      ]
+    },
+    {
+      "nome": "Varfarina",
+      "apresentacoes": [
+        {
+          "descricao": "5 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Verapamil",
+      "apresentacoes": [
+        {
+          "descricao": "80 mg comprimido"
+        }
+      ]
+    },
+    {
+      "nome": "Vitaminas do complexo B",
+      "apresentacoes": [
+        {
+          "descricao": "B1, B2, B6, B3, B5 e B12"
+        },
+        {
+          "descricao": "comprimido"
+        }
+      ]
+    }
+  ]
+}
