@@ -1,5 +1,5 @@
 using FluentValidation;
-using MedMinimalApi.Dtos;
+using PiraRemumeApi.Dtos;
 
 public class LoginRequesValidator : AbstractValidator<LoginRequest>
 {

@@ -1,3 +1,3 @@
-namespace MedMinimalApi.Dtos;
+namespace PiraRemumeApi.Dtos;
 
 public record LoginRequest(string NomeUsuario, string Senha);

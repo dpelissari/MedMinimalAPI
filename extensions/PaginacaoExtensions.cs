@@ -1,7 +1,7 @@
-using MedMinimalApi.Dtos;
+using PiraRemumeApi.Dtos;
 using Microsoft.EntityFrameworkCore;
 
-namespace MedMinimalApi.Extensions;
+namespace PiraRemumeApi.Extensions;
 
 public static class PaginacaoExtensions
 {

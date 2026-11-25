@@ -1,4 +1,4 @@
-namespace MedMinimalApi.Dtos;
+namespace PiraRemumeApi.Dtos;
 
 public record Paginacao(int Pagina = 1, int Tamanho = 20);
 

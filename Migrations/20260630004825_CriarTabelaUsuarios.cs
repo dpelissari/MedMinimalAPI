@@ -1,9 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace MedMinimalApi.Migrations
+namespace PiraRemumeApi.Migrations
 {
     /// <inheritdoc />
     public partial class CriarTabelaUsuarios : Migration
