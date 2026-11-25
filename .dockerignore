@@ -1,0 +1,10 @@
+.git
+.vs
+.cursor
+**/bin
+**/obj
+**/Properties/launchSettings.json
+appsettings.Development.json
+*.user
+*.slnx
+README.md
