@@ -80,7 +80,7 @@ public static class CatalogoFonteParser
 
             if (Regex.IsMatch(textoLinha, @"^\d+\.\s+\S"))
             {
-                grupo = Regex.Replace(textoLinha, @"^\d+\.\s*", "").Trim();
+                grupo = SemSufixoRepetido(Regex.Replace(textoLinha, @"^\d+\.\s*", "").Trim());
                 ultimoNome = null;
                 continue;
             }
@@ -344,6 +344,38 @@ public static class CatalogoFonteParser
 
     private static string LimparEspacos(string texto) =>
         Regex.Replace(texto.Trim(), @"\s+", " ");
+
+    public static string SemSufixoRepetido(string texto)
+    {
+        var palavras = texto.Split(' ', StringSplitOptions.RemoveEmptyEntries).ToList();
+        var mudou = true;
+        while (mudou && palavras.Count >= 2)
+        {
+            mudou = false;
+            for (var n = palavras.Count / 2; n >= 1; n--)
+            {
+                var inicio = palavras.Count - 2 * n;
+                var repetido = true;
+                for (var i = 0; i < n; i++)
+                {
+                    if (!palavras[inicio + i].Equals(palavras[inicio + n + i], StringComparison.OrdinalIgnoreCase))
+                    {
+                        repetido = false;
+                        break;
+                    }
+                }
+
+                if (!repetido)
+                    continue;
+
+                palavras.RemoveRange(palavras.Count - n, n);
+                mudou = true;
+                break;
+            }
+        }
+
+        return string.Join(" ", palavras);
+    }
 
     private static string NormalizarHtml(string html)
     {

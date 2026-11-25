@@ -1,5 +1,6 @@
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
+using PiraRemumeApi.Servicos;
 
 namespace PiraRemumeApi.Data;
 
@@ -31,9 +32,14 @@ public static class RemumeSeeder
         var farmaciasDesatualizadas = await db.FarmaciasMunicipais.CountAsync() != arquivoFarmacias.Itens.Count
             || await db.FarmaciasMunicipais.AnyAsync(f => string.IsNullOrWhiteSpace(f.Endereco));
 
+        var gruposAtuais = await db.Medicamentos.Select(m => m.GrupoFarmacologico).Distinct().ToListAsync();
+        var gruposRedundantes = gruposAtuais.Any(g =>
+            !string.IsNullOrWhiteSpace(g) && CatalogoFonteParser.SemSufixoRepetido(g) != g);
+
         var precisaReseed = forcar
             || !await db.Medicamentos.AnyAsync()
             || await db.Medicamentos.AnyAsync(m => string.IsNullOrWhiteSpace(m.GrupoFarmacologico))
+            || gruposRedundantes
             || farmaciasDesatualizadas;
 
         if (!precisaReseed)
@@ -63,7 +69,9 @@ public static class RemumeSeeder
             {
                 Id = Guid.NewGuid(),
                 Nome = item.Nome.Trim(),
-                GrupoFarmacologico = string.IsNullOrWhiteSpace(classificacao?.Grupo) ? "Sem classificação" : classificacao.Grupo.Trim(),
+                GrupoFarmacologico = string.IsNullOrWhiteSpace(classificacao?.Grupo)
+                    ? "Sem classificação"
+                    : CatalogoFonteParser.SemSufixoRepetido(classificacao.Grupo.Trim()),
                 ClasseTerapeutica = string.IsNullOrWhiteSpace(classificacao?.Classe) ? "Não informada" : classificacao.Classe.Trim()
             };
 
