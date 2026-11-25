@@ -9,6 +9,10 @@ using Microsoft.IdentityModel.Tokens;
 
 var builder = WebApplication.CreateBuilder(args);
 
+var porta = Environment.GetEnvironmentVariable("PORT");
+if (!string.IsNullOrWhiteSpace(porta))
+    builder.WebHost.UseUrls($"http://0.0.0.0:{porta}");
+
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<MedicamentoDb>(opt => opt.UseNpgsql(connectionString));
 
@@ -44,6 +48,10 @@ builder.Services.AddAuthorization(options =>
     options.AddPolicy("AdminOuUsuario", policy => policy.RequireRole("Admin", "User"));
 });
 
+var origensPermitidas = builder.Configuration["Cors:Origins"]?
+    .Split(',', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)
+    ?? [];
+
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("Angular", policy =>
@@ -52,7 +60,14 @@ builder.Services.AddCors(options =>
                 if (!Uri.TryCreate(origin, UriKind.Absolute, out var uri))
                     return false;
 
-                return uri.IsLoopback;
+                if (uri.IsLoopback)
+                    return true;
+
+                if (uri.Scheme == Uri.UriSchemeHttps
+                    && uri.Host.EndsWith(".vercel.app", StringComparison.OrdinalIgnoreCase))
+                    return true;
+
+                return origensPermitidas.Contains(origin, StringComparer.OrdinalIgnoreCase);
             })
             .AllowAnyHeader()
             .AllowAnyMethod());
