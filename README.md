@@ -4,7 +4,7 @@ PiraREMUME é a consulta pública da Relação Municipal de Medicamentos Essenci
 
 O projeto não inventa essa lista. Organiza o que já está no site da Prefeitura para ficar fácil de buscar. Dá para saber se o medicamento faz parte da REMUME, se sai em toda a rede ou só em algumas farmácias, e onde fica a unidade do posto. Não diz se tem o item na prateleira hoje. Isso só a farmácia confirma. Farmácia particular (Drogal, Drogaria São Paulo e outras) não entra.
 
-Este repositório é o **backend**. Guarda o catálogo, responde as buscas e cuida do login admin. O site que a pessoa usa está em [PiraREMUME (client)](https://github.com/dpelissari/MedClient).
+Este repositório é o **backend**. Guarda o catálogo, responde as buscas e cuida do login admin. O site publicado está em [pira-remume-client-alpha.vercel.app](https://pira-remume-client-alpha.vercel.app/). O código do site está em [PiraREMUME (client)](https://github.com/dpelissari/MedClient).
 
 Fontes oficiais:
 
